@@ -11,11 +11,7 @@ class BalenaDeviceUptimeMetricsService:
             print("No Webhook URL specified. Please set WEBHOOK_DESTINATION_URL environment variable.")
             time.sleep(10)
             quit()
-        try: self.device_id = os.environ["BALENA_DEVICE_UUID"]
-        except Exception as e: 
-            print("No Device ID specified. Please set BALENA_DEVICE_ID environment variable.")
-            time.sleep(10)
-            quit()
+        self.device_id = os.environ["BALENA_DEVICE_UUID"]
         self.is_emergency_transmission = False
         self.regular_transmission_interval = os.environ.get("REGULAR_TRANSMISSION_INTERVAL", 60)
         self.emergency_transmission_interval = os.environ.get("EMERGENCY_TRANSMISSION_INTERVAL", 10)
