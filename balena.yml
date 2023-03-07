@@ -2,7 +2,7 @@ name: datacake-device-monitor-service
 description: >-
   Device monitoring server that collects information about CPU, memory and disk 
   and provides it to Datacake IoT platform for alerting via email or SMS.
-version: 1.0.0
+version: 1.0.1
 type: sw.block
 assets:
   repository:
